@@ -1,0 +1,21 @@
+#hit APIs of model
+curl http://192.168.1.6:11434/api/generate -d '{
+  "model": "llama3.2:3b",
+  "prompt": "Why is the sky blue? answer in only 10 words","stream":false
+}'
+
+
+curl http://192.168.1.6:11434/api/generate -d '{
+  "model": "qwen2.5-coder:latest",
+  "prompt": "Why is the sky blue? answer in only 10 words","stream":false
+}'
+
+#list models
+curl http://192.168.1.6:11434/api/tags
+
+
+
+
+export OPENAI_API_KEY=fake-key
+export OPENAI_MODEL_NAME=llama3.2:3b
+export OPENAI_BASE_URL=http://192.168.1.6:11434/api/generate 
